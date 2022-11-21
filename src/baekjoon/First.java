@@ -136,7 +136,7 @@ public class First {
         System.out.println(sb);*/
 
         //나머지연산- 모듈러 연산이라고 함
-        BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
+        /*BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
         st = new StringTokenizer(br.readLine());
@@ -148,6 +148,50 @@ public class First {
         System.out.println((a+b)%c);
         System.out.println(((a+b)%c)%c);
         System.out.println(((a*b)%c)%c);
-        System.out.println(((a*b)%c)%c);
+        System.out.println(((a*b)%c)%c);*/
+
+        //곱셈
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int a = Integer.parseInt(br.readLine());
+        String b = br.readLine();
+
+        String[] arr = b.split("");
+
+        int b1 = Integer.parseInt(arr[0]);
+        int b2 = Integer.parseInt(arr[1]);
+        int b3 = Integer.parseInt(arr[2]);
+
+        int third = b3 * a;
+        int fourth = b2 * a;
+        int fifth = b1 * a;
+
+        System.out.println(third);
+        System.out.println(fourth);
+        System.out.println(fifth);
+        System.out.println(third+(fourth*10)+(fifth*100));*/
+
+        //고양이
+        /*System.out.println("\\    /\\");
+        System.out.println(" )  ( ')");
+        System.out.println("(  /  )");
+        System.out.println(" \\(__)|");*/
+
+        //개
+        /*System.out.println("|\\_/|");
+        System.out.println("|q p|   /}");
+        System.out.println("( 0 )\"\"\"\\");
+        System.out.println("|\"^\"`    |");
+        System.out.println("||_/=\\\\__|");*/
+
+        //새싹
+        System.out.println("         ,r'\"7");
+        System.out.println("r`-_   ,'  ,/");
+        System.out.println(" \\. \". L_r'");
+        System.out.println("   `~\\/");
+        System.out.println("      |");
+        System.out.println("      |");
+
+
     }
 }
