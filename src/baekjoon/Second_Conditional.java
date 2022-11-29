@@ -109,6 +109,8 @@ public class Second_Conditional {
 
         //주사위 세개 
         //와 이거 진짜 어렵다... 조건문에 왤케 약하지
+        // 최대값 구하기는 Math.max로도 할 수 있음
+        // Math.max(a, Math.max(b,c));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
