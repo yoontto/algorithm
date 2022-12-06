@@ -17,9 +17,7 @@ public class Hamberger133502 {
                 String goodBurger = "1231";
 
                 //햄버거 만든 자리 -2 해줄 값
-                //int resetNum = 0;
-                for (int i = 0; i < ingredient.length; i++) {
-                    
+
                     //1) StringBuilder를 사용하면 delete로 replace의 역할을 대신할 수 있음
                     //   sb의 delete의 장점:: replace한 값을 재할당해주지 않아도 됨
                     //   시간초과 : replace는 전체를 치환함, 시간도 오래걸림
