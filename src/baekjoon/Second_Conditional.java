@@ -8,6 +8,7 @@ import java.util.StringTokenizer;
 public class Second_Conditional {
 // public class Main {
     public static void main(String[] args) throws IOException {
+
         //두수 비교하기
         /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
