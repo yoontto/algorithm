@@ -1,155 +1,168 @@
 package baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class Third_For {
 // public class Main {
     public static void main(String[] args) throws IOException {
+        //구구단
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
 
-        //두수 비교하기
+        for(int i = 1; i < 10; i++){
+            System.out.println(N + " * " + i + " = " + N*i);
+        }*/
+
+
+        //A+B -3
         /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
+        int T = Integer.parseInt(br.readLine());
 
-        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < T; i++) {
+            //br = new BufferedReader(new InputStreamReader(System.in));
+            st = new StringTokenizer(br.readLine(), " ");
 
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
 
-        String result = a > b ? ">" : a < b ? "<" : "==";
-
-        System.out.println(result);*/
-
-        //시험성적
-        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int a = Integer.parseInt(br.readLine());
-
-        String result = a >= 90 && a <= 100 ? "A"
-                    : a >= 80 && a < 90 ? "B"
-                    : a >= 70 && a < 80 ? "C"
-                    : a >= 60 && a < 70 ? "D"
-                    : "F";
-
-        System.out.println(result);*/
-
-        //윤년
-        // 윤년 = 4의 배수 && 100의 배수 아닐때 or 400의 배수
-        //윤년 == 1, 윤년아님 == 0
-        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int y = Integer.parseInt(br.readLine());
-
-        int result = (y % 4 == 0 && y % 100 > 0) || (y % 400 == 0) ? 1 : 0;
-
-        System.out.println(result);*/
-
-        //사분면
-        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int x = Integer.parseInt(br.readLine());
-        int y = Integer.parseInt(br.readLine());
-
-        int result = 0;
-
-        if(x > 0){
-            result = y > 0 ? 1 : 4;
-        } else {
-            result = y > 0 ? 2 : 3;
+            sb.append(A + B);
+            sb.append("\n");
         }
+        System.out.print(sb);*/
 
-        System.out.println(result);*/
 
-        //알람시계
-        //알람 45분 앞당기기
+        //합
         /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(br.readLine());
+        int tmp = n - 1;
+
+        while (tmp > 0){
+            n += tmp--;
+        }
+        System.out.println(n);*/
+        
+        //영수증
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int X = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
+        int total = 0;
+
         StringTokenizer st;
 
-        st = new StringTokenizer(br.readLine());
-
-        int h = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-
-        int outM = m + 15;
-        if(outM >= 60){
-            m = outM - 60;
-        } else {
-            m = outM;
-            h -= 1;
+        for(int i = 0; i < N; i++){
+            st = new StringTokenizer(br.readLine(), " ");
+            total += Integer.parseInt(st.nextToken()) * Integer.parseInt(st.nextToken());
         }
 
-        if(h < 0){
-            h += 24;
-        }
-        System.out.print(h + " " +m);*/
+        String result = total == X ? "Yes" : "No";
+        System.out.println(result);*/
 
-        //오븐 시계
+
+        //빠른 A+B
+        //처음보는 개념 : BufferedWriter.flush()
+        //flush()는 현재 버퍼에 저장되어 있는 내용을 클라이언트로 전송하고 버퍼를 비운다. (JSP)
+        //bw.write(s);//출력
+        //bw.newLine(); //줄바꿈
+        //bw.flush();//남아있는 데이터를 모두 출력시킴
+        //bw.close();//스트림을 닫음
         /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
         StringTokenizer st;
-        st = new StringTokenizer(br.readLine());
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < T; i++){
+            st = new StringTokenizer(br.readLine());
 
-        int h = Integer.parseInt(st.nextToken());
-        int m = Integer.parseInt(st.nextToken());
-        int cookTime = Integer.parseInt(br.readLine());
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
 
-        int min = m+cookTime;
-
-        if(min >= 60){
-            m = min % 60;
-            h += min / 60;
-        } else {
-            m += cookTime;
+            sb.append(A+B+"\n");
         }
 
-        if(h >= 24){
-            h -=24;
+        bw.write(sb.toString());
+        bw.flush();
+        */
+
+
+        //A+B - 7
+        //sb.append할 때 a+b로 입력하면 문자 그대로 입력됨
+        //2+3 -> 23
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+        StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
+
+
+        for(int i = 1; i <= T; i++){
+            st = new StringTokenizer(br.readLine());
+            int Sum = Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken());
+
+            sb.append("Case #" + i + ": " + Sum + "\n");
         }
 
-        System.out.print(h+" "+m);*/
+        System.out.println(sb);*/
 
-        //주사위 세개 
-        //와 이거 진짜 어렵다... 조건문에 왤케 약하지
-        // 최대값 구하기는 Math.max로도 할 수 있음
-        // Math.max(a, Math.max(b,c));
+
+        //A+B - 8
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st;
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        for(int i = 1; i <= T; i++){
+            st = new StringTokenizer(br.readLine());
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
+            int Sum = A+B;
+            sb.append("Case #"+ i + ": " + A + " + " + B + " = " + Sum +"\n");
+        }
+
+        bw.write(String.valueOf(sb));
+        bw.flush();*/
+
+
+        //별 찍기 - 1
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+
+        for(int i = 1; i <= T; i++){
+            for(int k = 0; k < i; k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }*/
+
+
+
+        //별 찍기 - 2
+        //언제 해도 생각하는게 겁나 빡세네,,
+        //숫자를 써가면서 천천히 생각해보는 연습 필요
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        int T = Integer.parseInt(br.readLine());
 
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
-        int c = Integer.parseInt(st.nextToken());
+        //if -> T : 5
+        //empty : 4 3 2 1 0 :: int k = T -1; k >= 0; k--;
+        //star  : 1 2 3 4 5 :: int i = 1; i <= T; i++;
 
-        int prize = 0;
-
-        if(a == b && b == c){
-            prize = 10000 + a * 1000;
-        } else {
-            if(a != b && a != c && b != c){ // 세 수가 모두 다른 경우
-                int max;
-                if(a > b){
-                    if(c > a){ //c>a>b
-                        max = c;
-                    } else { // a>b,c
-                        max = a;
-                    }
-                } else { //b > a
-                    if(c > b){ //
-                        max = c;
-                    } else { // b>a, c<b
-                        max = b;
-                    }
-                }
-                prize = max * 100;
-            } else {
-                if(a == c || a == b){ //363
-                    prize = 1000 + a * 100;
-                } else { //633
-                    prize = 1000 + b * 100;
+        for(int k = 0; k < T; k++) {
+            for (int i = T; i > 0; i--) { //k = 0, < i= 3
+                if(i - 1 > k){
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
                 }
             }
-
+            System.out.println();
         }
-        System.out.print(prize);
+
+
+
+
     }
 }
 
