@@ -142,7 +142,7 @@ public class Third_For {
         //별 찍기 - 2
         //언제 해도 생각하는게 겁나 빡세네,,
         //숫자를 써가면서 천천히 생각해보는 연습 필요
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
 
         //if -> T : 5
@@ -158,7 +158,46 @@ public class Third_For {
                 }
             }
             System.out.println();
+        }*/
+
+
+
+        //A+B - 5
+        //입력의 마지막에는 '0 0' 들어옴
+        //while문을 사용할때는 어디서 break를 걸지 생각해봐야 함
+        //if문을 사용하는 것보다 break를 사용해서 끊어내는 조건에 더 집중해보기
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
+        int A = 10;
+        int B = 10;
+
+        while (A != 0 && B != 0) {
+            st = new StringTokenizer(br.readLine(), " ");
+
+            A = Integer.parseInt(st.nextToken());
+            B = Integer.parseInt(st.nextToken());
+            if(A != 0 && B != 0) {
+                int all = A + B;
+
+                sb.append(all + "\n");
+            }
         }
+
+        /*while(true) {
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            if(a == 0 && b == 0) {
+                break;
+            }
+            sb.append((a+b) +"\n");
+        }*/
+
+        System.out.print(sb);
+
+
 
 
 
